@@ -1,0 +1,10 @@
+.getTable, td,th,tr{
+    border: 2px solid rgb(4, 196, 46);
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 20px;
+}
+
+.getTable{
+    width: 100%;
+}

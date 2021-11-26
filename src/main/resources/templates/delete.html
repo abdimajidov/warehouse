@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/formStyle.css">
+    <link rel="stylesheet" href="../static/getStyle.css">
+</head>
+
+<body>
+
+<!--
+                   Do'nt touch this part!
+-->
+<div id="header">
+    <div class="container">
+        <h1>Warehouse</h1>
+    </div>
+</div>
+<div id="navbar">
+    <div class="container">
+        <ul>
+            <li><a href="/">Asosiy sahifa</a></li>
+            <li><a href="/product/add">Maxsulot qo'shish</a></li>
+            <li><a href="/product/get">Maxsulotlarni ko'rish </a></li>
+            <li><a href="/product/delete">Maxsulotlarni o'chirish</a></li>
+
+        </ul>
+    </div>
+</div>
+<footer class="fixed_footer">
+    <div class="container">
+        <div class="content">
+            <p>
+                &copy; Sardorbek
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+<div class="container" xmlns:th="http://thymeleaf.org">
+    <main class="content" role="main">
+        <h1>Maxsulot nomi orqali o'chirish:</h1>
+            <div class="addForm" xmlns:th="http://www.thymeleaf.org">
+            <form action="/product/delete/byName" method="get" >
+                <label>
+                   Nomini kiriting:
+                </label>
+                <input type="text" name="name" class="input">
+                <input type="submit"
+                       value="O'chirish" class="submitButton">
+            </form>
+            <br>
+
+            <table class="getTable">
+                <tr>
+                    <th><b>Nomer</b></th>
+                    <th><b>Nomi</b></th>
+                    <th><b>Narxi</b></th>
+                    <th><b>O'lchov qiymati</b></th>
+                    <th><b>O'lchov turi</b></th>
+                    <th><b>Saqlash muddati</b></th>
+                </tr>
+
+                <tbody xmlns:th="http://thymeleaf.org">
+<!--                <tr th:if="${listProduct.isEmpty()}">-->
+<!--                    <td colspan="6"> No product Available</td>-->
+<!--                </tr>-->
+
+                <tr th:each="product:${listProduct}">
+                    <td><span th:text="${product.number}"></span></td>
+                    <td><span th:text="${product.name}"></span></td>
+                    <td><span th:text="${product.price}"></span></td>
+                    <td><span th:text="${product.meassurementValue}"></span></td>
+                    <td><span th:text="${product.meassurementType}"></span></td>
+                    <td><span th:text="${product.storageDate}"></span></td>
+                </tr>
+                </tbody>
+
+
+            </table>
+
+        </div>
+
+
+    </main>
+</div>
+
+
+</body>
+</html>

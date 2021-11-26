@@ -1,0 +1,137 @@
+*,ul,li,a{
+    margin:0;
+    padding: 0;
+}
+
+#header{
+    background-color: #fff;
+}
+
+
+#header {
+    background-color: rgb(4, 196, 46);
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+#header h1 {
+    color: white;
+    font-family: sans-serif;
+    padding: 10px 0;
+    text-shadow: 3px 0px 3px green;
+    transition: text-shadow 2s;
+}
+
+#header h1:hover{
+    text-shadow: 4px 0px 5px #000;
+}
+
+#navbar {
+
+    background-color: #333;
+    margin-top: 0;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 7px rgb(61, 61, 61);
+    position: sticky;
+    top: 0;
+
+
+}
+
+#navbar ul li {
+    list-style-type: none;
+    display: inline;
+
+}
+
+#navbar ul li a{
+    list-style-type: none;
+    display: inline;
+    text-shadow: 3px 0px 3px rgb(0, 0, 0);
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 20px 10px;
+    display: inline-block;
+    transition:color 1s;
+    font-size: 110%;
+}
+
+#navbar ul li a:hover {
+
+    color:rgb(4, 196, 46);
+    transform: scale(1.1);
+    transition: 1s;
+
+}
+
+
+#navbar ul li:first-child a {
+    padding-left: 0;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,900);
+
+*, *:before, *:after{
+    box-sizing: border-box;
+    font: 300 15px 'Merriweather', serif; color: #242424;
+    padding: 0; margin: 0;
+}
+
+html, body{background: rgb(236, 240, 241);}
+
+.content{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 350px; /* Same height as footer */
+    padding: 100px 0;
+
+
+}
+
+.content h1{
+    font-family: sans-serif;
+    text-align: center;
+
+}
+
+h1{
+    color: #111;
+    font-size: 3em;
+    font-weight: 900;
+    padding: 0 0 20px 0;
+}
+h2{
+    color: #111;
+    font-size: 2em;
+    font-weight: 900;
+    padding: 0 0 15px 0;
+}
+p{
+    font-size: 1.25em;
+    padding: 0 0 40px 0;
+}
+
+.fixed_footer{
+    width: 100%;
+    height: 300px;
+    background: #333;
+    position: fixed; left: 0; bottom: 0;
+    z-index: -100;
+}
+
+.fixed_footer p{
+    color: #fff;
+    text-align: center;
+}
+
+
+
+

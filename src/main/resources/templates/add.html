@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link rel="stylesheet" href="../static/formStyle.css">
+</head>
+
+<body>
+<div id="header">
+    <div class="container">
+        <h1>Warehouse</h1>
+    </div>
+</div>
+
+<div id="navbar">
+    <div class="container">
+        <ul>
+            <li><a href="/">Asosiy sahifa</a></li>
+            <li><a href="/product/add">Maxsulot qo'shish</a></li>
+            <li><a href="/product/get">Maxsulotlarni ko'rish </a></li>
+            <li><a href="/product/delete">Maxsulotlarni o'chirish</a></li>
+
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <main class="content" role="main">
+        <h1>Yangi maxsulot qo'shish paneliga xush kelibsiz</h1>
+        <div class="addForm">
+
+            <form action="/product/add" method="post" >
+
+                <label>Maxsulot nomini kiriting:</label>
+                <input class="input" type="text" name="name" placeholder="name"><br><br>
+
+                <label>O'lchov turini tanlang:</label>
+                <select class="select" name="TypeOfMeassurement">
+                    <option value="kg">kg</option>
+                    <option value="pieces">pieces</option>
+                </select><br><br>
+
+                <label>Maxsulot o'lcham qiymatini kiriting:</label>
+                <input class="input" type="number" name="ValeOfMeassurement"
+                       placeholder="o'lchov qiymati" ><br><br>
+
+                <label>Saqlash muddatini tanlang:</label>
+                <input class="date" type="date" name="storageDate"><br><br>
+
+                <label>Maxsulot narxini kiriting:</label>
+                <input class="input" type="number" name="price" placeholder="narxi $"
+                     ><br><br>
+
+                <input class="submitButton" type="submit"
+                       value="Kiritish">
+
+
+            </form>
+        </div>
+
+
+
+
+    </main>
+</div>
+
+
+
+
+
+<footer class="fixed_footer">
+    <div class="container">
+        <div class="content">
+            <br>
+
+            <p>
+                &copy; Sardorbek
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

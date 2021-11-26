@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/getStyle.css">
+    <link rel="stylesheet" href="../static/formStyle.css">
+</head>
+
+<body>
+<div id="header">
+    <div class="container">
+        <h1>Warehouse</h1>
+    </div>
+</div>
+
+<div id="navbar">
+    <div class="container">
+        <ul>
+            <li><a href="/">Asosiy sahifa</a></li>
+            <li><a href="/product/add">Maxsulot qo'shish</a></li>
+            <li><a href="/product/get">Maxsulotlarni ko'rish </a></li>
+            <li><a href="/product/delete">Maxsulotlarni o'chirish</a></li>
+
+        </ul>
+    </div>
+</div>
+
+
+<div class="container">
+    <main class="content" role="main">
+        <h1>Maxsulotni ko'rish uchun sahifa</h1>
+
+        <form action="/product/get" ; method="post">
+            <label>
+                Izlash :
+            </label>
+            <input type="text" name="name" class="input">
+            <select class="select" name="TypeOfSearch">
+                <option value="name">Nomi</option>
+                <option value="price">Narxi</option>
+                <option value="MeassurementType">O'lchov turi</option>
+                <option value="MeassurementValue">O'lchov qiymati</option>
+                <option value="StorageDate">Saqlash muddati</option>
+            </select>
+            <input type="submit"
+                   value="Izlash" class="submitButton">
+        </form>
+        <br><br>
+
+            <form action="/product/get/file" method="get">
+                <label>
+                    Fayl yuklab olish :
+                </label>
+                <select class="select" name="type">
+                    <option value="pdf">pdf</option>
+                    <option value="excel">Excel</option>
+                </select>
+                <input type="submit"
+                       value="Yuklab olish" class="submitButton">
+            </form>
+
+
+        <br>
+        <table class="getTable">
+            <tr>
+                <th><b>Nomer</b></th>
+                <th><b>Nomi</b></th>
+                <th><b>Narxi</b></th>
+                <th><b>O'lchov qiymati</b></th>
+                <th><b>O'lchov turi</b></th>
+                <th><b>Saqlash muddati</b></th>
+            </tr>
+
+            <tbody>
+            <tr th:if="${listProduct.empty}">
+                <td colspan="6"> Maxsulot yo'q</td>
+            </tr>
+
+            <tr th:each="product:${listProduct}">
+                <td><span th:text="${product.number}"></span></td>
+                <td><span th:text="${product.name}"></span></td>
+                <td><span th:text="${product.price}"></span></td>
+                <td><span th:text="${product.meassurementValue}"></span></td>
+                <td><span th:text="${product.meassurementType}"></span></td>
+                <td><span th:text="${product.storageDate}"></span></td>
+            </tr>
+            </tbody>
+
+
+        </table>
+
+    </main>
+</div>
+
+
+<footer class="fixed_footer">
+    <div class="container">
+        <div class="content">
+            <p>
+                &copy; Sardorbek
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
