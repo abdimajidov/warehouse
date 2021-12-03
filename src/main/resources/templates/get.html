@@ -21,10 +21,10 @@
 <div id="navbar">
     <div class="container">
         <ul>
-            <li><a href="/">Asosiy sahifa</a></li>
-            <li><a href="/product/add">Maxsulot qo'shish</a></li>
-            <li><a href="/product/get">Maxsulotlarni ko'rish </a></li>
-            <li><a href="/product/delete">Maxsulotlarni o'chirish</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/product/add">Add Product</a></li>
+            <li><a href="/product/get">View product</a></li>
+            <li><a href="/product/delete">Delete product</a></li>
 
         </ul>
     </div>
@@ -33,28 +33,28 @@
 
 <div class="container">
     <main class="content" role="main">
-        <h1>Maxsulotni ko'rish uchun sahifa</h1>
+        <h1>Product view page</h1>
 
         <form action="/product/get" ; method="post">
             <label>
-                Izlash :
+                Search :
             </label>
             <input type="text" name="name" class="input">
             <select class="select" name="TypeOfSearch">
-                <option value="name">Nomi</option>
-                <option value="price">Narxi</option>
-                <option value="MeassurementType">O'lchov turi</option>
-                <option value="MeassurementValue">O'lchov qiymati</option>
-                <option value="StorageDate">Saqlash muddati</option>
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+                <option value="MeassurementType">Meassurement type</option>
+                <option value="MeassurementValue">Meassurement value</option>
+                <option value="StorageDate">Storage date</option>
             </select>
             <input type="submit"
-                   value="Izlash" class="submitButton">
+                   value="Search" class="submitButton">
         </form>
         <br><br>
 
             <form action="/product/get/file" method="get">
                 <label>
-                    Fayl yuklab olish :
+                    Download file :
                 </label>
                 <select class="select" name="type">
                     <option value="pdf">pdf</option>
@@ -68,17 +68,17 @@
         <br>
         <table class="getTable">
             <tr>
-                <th><b>Nomer</b></th>
-                <th><b>Nomi</b></th>
-                <th><b>Narxi</b></th>
-                <th><b>O'lchov qiymati</b></th>
-                <th><b>O'lchov turi</b></th>
-                <th><b>Saqlash muddati</b></th>
+                <th><b>Number</b></th>
+                <th><b>Name</b></th>
+                <th><b>Price</b></th>
+                <th><b>Meassurement value</b></th>
+                <th><b>Meassurement type</b></th>
+                <th><b>Storage date</b></th>
             </tr>
 
             <tbody>
             <tr th:if="${listProduct.empty}">
-                <td colspan="6"> Maxsulot yo'q</td>
+                <td colspan="6">Product not available</td>
             </tr>
 
             <tr th:each="product:${listProduct}">

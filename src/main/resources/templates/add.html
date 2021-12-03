@@ -21,10 +21,10 @@
 <div id="navbar">
     <div class="container">
         <ul>
-            <li><a href="/">Asosiy sahifa</a></li>
-            <li><a href="/product/add">Maxsulot qo'shish</a></li>
-            <li><a href="/product/get">Maxsulotlarni ko'rish </a></li>
-            <li><a href="/product/delete">Maxsulotlarni o'chirish</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/product/add">Add Product</a></li>
+            <li><a href="/product/get">View product</a></li>
+            <li><a href="/product/delete">Delete product</a></li>
 
         </ul>
     </div>
@@ -34,33 +34,33 @@
 
 <div class="container">
     <main class="content" role="main">
-        <h1>Yangi maxsulot qo'shish paneliga xush kelibsiz</h1>
+        <h1>Add new product</h1>
         <div class="addForm">
 
             <form action="/product/add" method="post" >
 
-                <label>Maxsulot nomini kiriting:</label>
+                <label>Enter product name:</label>
                 <input class="input" type="text" name="name" placeholder="name"><br><br>
 
-                <label>O'lchov turini tanlang:</label>
+                <label>Choose meassurement type:</label>
                 <select class="select" name="TypeOfMeassurement">
                     <option value="kg">kg</option>
                     <option value="pieces">pieces</option>
                 </select><br><br>
 
-                <label>Maxsulot o'lcham qiymatini kiriting:</label>
+                <label>Enter meassurement value:</label>
                 <input class="input" type="number" name="ValeOfMeassurement"
-                       placeholder="o'lchov qiymati" ><br><br>
+                       placeholder="value" ><br><br>
 
-                <label>Saqlash muddatini tanlang:</label>
+                <label>Choose storage date:</label>
                 <input class="date" type="date" name="storageDate"><br><br>
 
-                <label>Maxsulot narxini kiriting:</label>
-                <input class="input" type="number" name="price" placeholder="narxi $"
+                <label>Enter product price:</label>
+                <input class="input" type="number" name="price" placeholder="price $"
                      ><br><br>
 
                 <input class="submitButton" type="submit"
-                       value="Kiritish">
+                       value="Add">
 
 
             </form>

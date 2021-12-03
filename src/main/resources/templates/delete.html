@@ -23,10 +23,10 @@
 <div id="navbar">
     <div class="container">
         <ul>
-            <li><a href="/">Asosiy sahifa</a></li>
-            <li><a href="/product/add">Maxsulot qo'shish</a></li>
-            <li><a href="/product/get">Maxsulotlarni ko'rish </a></li>
-            <li><a href="/product/delete">Maxsulotlarni o'chirish</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/product/add">Add Product</a></li>
+            <li><a href="/product/get">View product</a></li>
+            <li><a href="/product/delete">Delete product</a></li>
 
         </ul>
     </div>
@@ -44,26 +44,26 @@
 
 <div class="container" xmlns:th="http://thymeleaf.org">
     <main class="content" role="main">
-        <h1>Maxsulot nomi orqali o'chirish:</h1>
+        <h1>Delete by name:</h1>
             <div class="addForm" xmlns:th="http://www.thymeleaf.org">
             <form action="/product/delete/byName" method="get" >
                 <label>
-                   Nomini kiriting:
+                   Enter product name:
                 </label>
                 <input type="text" name="name" class="input">
                 <input type="submit"
-                       value="O'chirish" class="submitButton">
+                       value="Delete" class="submitButton">
             </form>
             <br>
 
             <table class="getTable">
                 <tr>
-                    <th><b>Nomer</b></th>
-                    <th><b>Nomi</b></th>
-                    <th><b>Narxi</b></th>
-                    <th><b>O'lchov qiymati</b></th>
-                    <th><b>O'lchov turi</b></th>
-                    <th><b>Saqlash muddati</b></th>
+                    <th><b>Number</b></th>
+                    <th><b>Name</b></th>
+                    <th><b>Price</b></th>
+                    <th><b>Meassurement value</b></th>
+                    <th><b>Meassurement type</b></th>
+                    <th><b>Storage date</b></th>
                 </tr>
 
                 <tbody xmlns:th="http://thymeleaf.org">
